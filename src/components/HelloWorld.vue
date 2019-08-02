@@ -19,7 +19,7 @@
 
 <script>
 import Stats from '@/components/Stats.vue';
-import { mapState } from 'vuex';
+import { mapState, mapMutations } from 'vuex';
 export default {
   name: 'HelloWorld',
   data() {
@@ -35,6 +35,15 @@ export default {
       'title',
       'links',
       ]),
+  },
+  methods: {
+    ...mapMutations([
+      'ADD_LINK'
+    ]),
+    addLink() {
+      this.ADD_LINK(this.newLink);
+      this.newLink = '';
+    }
   }
 };
 </script>
