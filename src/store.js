@@ -8,7 +8,7 @@ export default new Vuex.Store({
     title: 'My Custom Title',
     links: [
       'http://test.com',
-      'http://hello.com',
+      'https://hello.com',
       'http://cats.com',
     ]
   },
