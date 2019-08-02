@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="linkManager">
     <div class="left">
       <h1>{{ title }}</h1>
       <form @submit.prevent="addLink">
@@ -21,7 +21,7 @@
 import Stats from '@/components/Stats.vue';
 import { mapState, mapMutations } from 'vuex';
 export default {
-  name: 'HelloWorld',
+  name: 'LinkManager',
   data() {
     return {
       newLink: '',
@@ -58,7 +58,7 @@ export default {
     height: 100%;
   }
 
-  .hello {
+  .linkManager {
     display: grid;
     grid-template-columns: repeat(2, 50%);
     grid-template-rows: 100%;
