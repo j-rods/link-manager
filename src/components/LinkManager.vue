@@ -7,7 +7,7 @@
       </form>
       <ul>
         <li v-for="(link, index) in links" v-bind:key="index">
-          {{ link }}
+          {{ link | formatLink }}
         </li> 
       </ul>
     </div>
@@ -43,6 +43,16 @@ export default {
     addLink: function() {
       this.ADD_LINK(this.newLink);
       this.newLink = '';
+    }
+  },
+  filters: {
+    formatLink: function(value) {
+      if (!value) return ''
+      if (value.indexOf("http://") == 0 || value.indexOf("https://") == 0) {
+        return value
+      } else {
+        return 'http://' + value
+      }
     }
   }
 };
