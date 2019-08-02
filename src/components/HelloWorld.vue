@@ -89,7 +89,7 @@ export default {
   input {
     border: none;
     padding: 20px;
-    width: calc(100% = 40px);
+    width: calc(100% - 40px);
     box-shadow: 0 5px 5px lightgrey;
     margin-bottom: 50px;
     outline: none;
