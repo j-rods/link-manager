@@ -12,8 +12,13 @@ export default new Vuex.Store({
       'http://cats.com',
     ]
   },
+  getters: {
+    countLinks: state => {
+      return state.links.length
+    }
+  },
   mutations: {
-    
+
   },
   actions: {
 
