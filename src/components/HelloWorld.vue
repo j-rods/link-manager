@@ -40,7 +40,7 @@ export default {
     ...mapMutations([
       'ADD_LINK'
     ]),
-    addLink() {
+    addLink: function() {
       this.ADD_LINK(this.newLink);
       this.newLink = '';
     }
@@ -86,7 +86,7 @@ export default {
     background-color: #E9E9E9;
   }
 
-  .input {
+  input {
     border: none;
     padding: 20px;
     width: calc(100% = 40px);
