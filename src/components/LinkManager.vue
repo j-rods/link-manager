@@ -8,6 +8,7 @@
       <ul>
         <li v-for="(link, index) in links" v-bind:key="index">
           {{ link | formatLink }}
+          <button @click="removeLinks(index)" class="rm">Remove</button>
         </li> 
       </ul>
     </div>
@@ -19,7 +20,7 @@
 
 <script>
 import Stats from '@/components/Stats.vue';
-import { mapState, mapMutations } from 'vuex';
+import { mapState, mapMutations, mapActions } from 'vuex';
 export default {
   name: 'LinkManager',
   data() {
