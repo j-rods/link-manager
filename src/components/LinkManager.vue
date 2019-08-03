@@ -41,10 +41,16 @@ export default {
     ...mapMutations([
       'ADD_LINK'
     ]),
+    ...mapActions([
+      'removeLink'
+    ]),
     addLink: function() {
       this.ADD_LINK(this.newLink);
       this.newLink = '';
-    }
+    },
+    removeLinks(link) {
+      this.removeLink(link)
+    } 
   },
   filters: {
     formatLink: function(value) {
@@ -104,6 +110,17 @@ export default {
     box-shadow: 0 5px 5px lightgrey;
     margin-bottom: 50px;
     outline: none;
+  }
+
+  .rm {
+    float: right;
+    text-transform: uppercase;
+    font-size: .8em;
+    background: #ffd6e4;
+    border: none;
+    padding: 5px;
+    color: #ff0076;
+    cursor: pointer;
   }
 
 </style>
