@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations, mapActions } from 'vuex';
+import { mapGetters, mapActions } from 'vuex';
 export default {
   name: 'Stats',
   data() {
@@ -25,8 +25,8 @@ export default {
     ...mapActions([
       'removeAll'
     ]),
-    removeAllLinks() {
-      this.removeAll().then(() => {
+    async removeAllLinks() {
+      await this.removeAll().then(() => {
         this.msg = 'All Links removed'
       })
       .catch(error => {
